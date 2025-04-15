@@ -212,7 +212,7 @@ export default function Home() {
                   <FaGithub />
                 </div>
                 <a
-                  href="https://github.com/YourUsername"
+                  href="https://github.com/wendell-costa-barreto"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-4 hover:text-indigo-400 transition"
