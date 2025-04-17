@@ -23,22 +23,29 @@ export default function Home() {
   const [email] = useState("wendellbarreto2007@gmail.com");
   return (
     <>
-      <main>
-        <div className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%]">
+      <main className="overflow-hidden w-full">
+        <div className="w-full md:w-[55%] h-[69vh] md:h-[40vh] flex justify-center items-center md:items-start flex-col ml-0 md:ml-[7%]">
           <h1
-            className={`${roboto.className} uppercase font-roboto text-7xl ml-[5%]`}
+            className={`${roboto.className} uppercase font-roboto text-7xl ml-[8%] `}
           >
-            Front End Developer
+            Front End Developer{" "}
+            <span
+              className={`${roboto.className} font-roboto uppercase text-7xl md:hidden`}
+            >
+              and Designer
+            </span>
           </h1>
-          <h1 className={`${roboto.className} uppercase font-roboto text-7xl`}>
+          <h1
+            className={`${roboto.className} uppercase font-roboto text-5xl md:text-7xl hidden md:block`}
+          >
             and Designer
           </h1>
         </div>
 
         <div className="w-full h-[10vh] flex justify-end items-center">
-          <div className="mr-[7%] flex flex-col items-start space-y-2 max-w-md">
+          <div className="mr-0 md:mr-[7%] flex flex-col items-center md:items-start space-y-2 max-w-md">
             <h1
-              className={`${roboto.className} uppercase font-roboto text-xl text-justify`}
+              className={`${roboto.className} uppercase font-roboto text-xl text-justify w-[80%]`}
             >
               Hey there, my name is Wendell, I&apos;m a front-end developer and
               designer fluent in both code and human language. I build
@@ -64,7 +71,7 @@ export default function Home() {
         </div>
 
         <div className="w-full h-[40vh] flex justify-center items-center mb-[5%]">
-          <div className="grid grid-cols-3 gap-6 w-[84%] h-[40vh]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[84%] h-[40vh]">
             <div className="flex flex-col justify-start items-center gap-8">
               <h1
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
@@ -117,55 +124,56 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[1%]">
+        <div className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[62vh] md:mt-[1%]">
           <h1 className={`${roboto.className} uppercase font-roboto text-7xl`}>
             My projects
           </h1>
         </div>
-
-        <div className="w-full flex justify-start items-center mt-[2%] flex-row">
-          <div className="ml-[5%] w-[80%]">
-            <CarouselDemo
-              propArray={VisitezLeQuebec}
-              title="Visitez Le Quebec"
-              href="visitezlequebec"
-            />
-          </div>
-          <div className="w-[80%] h-full">
-            <CarouselDemo
-              propArray={NexusDashboard}
-              title="Nexus Dashboard"
-              href="nexusdashboard"
-            />
-          </div>
-        </div>
-
-        <div className="w-full flex justify-start items-center flex-row mt-[-18%]">
-          <div className="ml-[5%] w-[80%]">
-            <CarouselDemo
-              propArray={SolarSystem}
-              title="3D Solar System"
-              href="solarsystem"
-            />
-          </div>
-          <div className="w-[80%] h-full">
-            <CarouselDemo
-              propArray={EldenRing}
-              title="Elden Ring"
-              href="eldenring"
-            />
-          </div>
-        </div>
-
-        <div className="w-full flex justify-start items-center flex-row mt-[-18%]">
-          <div className="ml-[5%] w-[80%]">
-            <Link href={"/projects/cats"}>
+        <div className="w-full flex justify-start items-center mt-[1%] flex-col gap-[3vh] mb-[2%]">
+          <div className="w-full flex justify-start items-center mt-[1%] flex-col lg:flex-row">
+            <div className="ml-[5%] w-[80%]">
               <CarouselDemo
-                propArray={Cats}
-                title="Cat Races Gallery"
-                href="cats"
+                propArray={VisitezLeQuebec}
+                title="Visitez Le Quebec"
+                href="visitezlequebec"
               />
-            </Link>
+            </div>
+            <div className="w-[80%] h-full  lg:mt-0">
+              <CarouselDemo
+                propArray={NexusDashboard}
+                title="Nexus Dashboard"
+                href="nexusdashboard"
+              />
+            </div>
+          </div>
+
+          <div className="w-full flex justify-start items-center mt-[1%] flex-col lg:flex-row">
+            <div className="ml-[5%] w-[80%]  lg:mt-0">
+              <CarouselDemo
+                propArray={SolarSystem}
+                title="3D Solar System"
+                href="solarsystem"
+              />
+            </div>
+            <div className="w-[80%] h-full  lg:mt-0">
+              <CarouselDemo
+                propArray={EldenRing}
+                title="Elden Ring"
+                href="eldenring"
+              />
+            </div>
+          </div>
+
+          <div className="w-full flex justify-start items-center mt-[2%] flex-col lg:flex-row">
+            <div className="ml-[5%] w-[80%]  lg:mt-0">
+              <Link href={"/projects/cats"}>
+                <CarouselDemo
+                  propArray={Cats}
+                  title="Cat Races Gallery"
+                  href="cats"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </main>
@@ -225,7 +233,7 @@ export default function Home() {
                   <FaLinkedin />
                 </div>
                 <a
-                  href="https://linkedin.com/in/YourUsername"
+                  href="www.linkedin.com/in/wendell-costa-barreto-junior"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-4 hover:text-indigo-400 transition"
@@ -238,7 +246,7 @@ export default function Home() {
                   <FaWhatsapp />
                 </div>
                 <a
-                  href="https://wa.me/YourPhoneNumber"
+                  href="https://wa.me/+5571999018090"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-4 hover:text-indigo-400 transition"

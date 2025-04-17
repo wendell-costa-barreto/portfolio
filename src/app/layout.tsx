@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body className="bg-black text-white overflow-x-hidden">
         <header className="mt-5 w-full md:w-[20%] lg:w-[12%] uppercase flex justify-center items-center">
           <h4
             className={`${oswald.className} font-oswald sm:text-3xl md:text-sm text-gray-100`}

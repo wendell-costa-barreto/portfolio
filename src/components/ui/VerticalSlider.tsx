@@ -36,7 +36,7 @@ export default function CarouselDemo({
     window.location.href = `projects/${href}`;
   };
   return (
-    <Carousel className="w-full max-w-[750px] h-full max-h-[900px]  ">
+    <Carousel className="w-full max-w-[750px] h-[45vh]">
       <CarouselContent>
         {propArray.map(({ src, alt, id }) => (
           <CarouselItem key={id} className="h-[900px]">
@@ -48,7 +48,7 @@ export default function CarouselDemo({
                   {title}
                 </h1>
                 <Image
-                  className="object-contain w-full h-[50%] cursor-pointer"
+                  className="object-contain w-full h-[50%] cursor-pointer mt-[-25%] md:mt-0"
                   onClick={pushToRoute}
                   src={src}
                   alt={alt}
@@ -62,8 +62,8 @@ export default function CarouselDemo({
         ))}
       </CarouselContent>
       <div className="absolute right-[75px] top-[-30px] z-10">
-        <CarouselPrevious className="absolute right-[-50px] top-10 z-10 -translate-y-1/2 transform" />
-        <CarouselNext className="absolute right-[-50px] top-10 z-10 -translate-y-1/2 transform" />
+        <CarouselPrevious className="absolute right-[-55px] top-12 md:top-10 z-10 -translate-y-1/2 transform" />
+        <CarouselNext className="absolute right-[-55px] top-12 md:top-10 z-10 -translate-y-1/2 transform" />
       </div>
     </Carousel>
   );

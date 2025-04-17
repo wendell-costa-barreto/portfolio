@@ -3,10 +3,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
 body{
   background-color: black;
   color: white;
   position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body *{

@@ -129,15 +129,15 @@ export default function ProjectPage() {
 
   return (
     <>
-      <div className="w-full h-[10vh] flex justify-center items-start mt-[7%] flex-col mb-[12%]">
+      <div className="w-full h-[10vh] flex justify-center items-start flex-col mb-[12%] mt-[23vh] lg:mt-[15vh]">
         <h1
           className={`${roboto.className} uppercase font-roboto text-3xl mb-5 ml-[7%] font-bold`}
         >
           {project.title}
         </h1>
-        <div className="w-full flex justify-start gap-[20%]">
+        <div className="w-full flex justify-start gap-[20%] flex-col lg:flex-row">
           <h2
-            className={`${roboto.className} font-roboto text-2xl mb-5 ml-[7%] w-[30%]`}
+            className={`${roboto.className} font-roboto text-2xl mb-5 ml-[7%] w-[90%] lg:w-[30%]`}
           >
             {project.description}
             <br />
@@ -146,14 +146,14 @@ export default function ProjectPage() {
             </Link>
           </h2>
           <h2
-            className={`${roboto.className} font-roboto text-2xl mb-5 w-[30%]`}
+            className={`${roboto.className} font-roboto text-2xl mb-5 w-[90%] ml-[7%] lg:ml-0 lg:w-[30%]`}
           >
             <span className="font-bold">Tech Stack</span>
             <br /> {project.techStack.join(", ")}
           </h2>
         </div>
       </div>
-      <div className="w-full h-full flex flex-col justify-center items-center gap-6 mt-[1%]">
+      <div className="w-full h-full flex flex-col justify-center items-center gap-6 mt-[20vh]">
         {project.images.map((image) => (
           <Image
             key={image.id}
@@ -166,26 +166,28 @@ export default function ProjectPage() {
         ))}
       </div>
 
-      <div className="w-full h-[60%] flex justify-center items-center my-[5%]">
+      <div className="w-full h-[60%] flex justify-center items-center my-[15%] lg:my-[5%]">
         <div className="flex flex-col gap-4 w-full justify-center items-center">
-          <h1 className={`${roboto.className} font-roboto text-4xl mb-16`}>
+          <h1
+            className={`${roboto.className} font-roboto text-3xl mb-16 w-[85%] lg:w-full text-center`}
+          >
             {project.text.title}
           </h1>
           <p
-            className={`${roboto.className} font-roboto text-2xl w-[40%] text-justify`}
+            className={`${roboto.className} font-roboto text-xl lg:text-2xl w-[75%] lg:w-[40%] text-justify`}
           >
             {project.text.text1}
           </p>
           {project.text.text2 && (
             <p
-              className={`${roboto.className} font-roboto text-2xl w-[40%] text-justify`}
+              className={`${roboto.className} font-roboto text-xl lg:text-2xl w-[75%] lg:w-[40%] text-justify`}
             >
               {project.text.text2}
             </p>
           )}
           {project.text.text3 && (
             <p
-              className={`${roboto.className} font-roboto text-2xl w-[40%] text-justify`}
+              className={`${roboto.className} font-roboto text-xl lg:text-2xl w-[75%] lg:w-[40%] text-justify`}
             >
               {project.text.text3}
             </p>
@@ -193,7 +195,7 @@ export default function ProjectPage() {
         </div>
       </div>
 
-      <div className="w-full flex justify-between items-center h-[10vh] relative mb-[7vh]">
+      <div className="w-full flex justify-between items-center h-[15vh] relative mb-[7vh] mt-[20vh] lg:mt-0">
         <Link
           href={
             projects.indexOf(project) === 0
@@ -208,13 +210,15 @@ export default function ProjectPage() {
             <FaArrowLeftLong />
             Previous
           </span>
-          <span className={`${roboto.className} font-roboto text-5xl mx-16`}>
+          <span
+            className={`${roboto.className} font-roboto text-2xl lg:text-5xl mx-16`}
+          >
             {projects.indexOf(project) === 0
               ? projects[projects.length - 1].title
               : projects[projects.indexOf(project) - 1]?.title}
           </span>
         </Link>
-        <button className="absolute bottom-[35%] left-1/2 transform -translate-x-1/2 bg-transparent rounded-full py-3 px-16 hover:cursor-pointer hover:bg-white hover:text-black transition duration-300 ease-in-out border border-white">
+        <button className="absolute bottom-[15vh] lg:bottom-[35%] left-1/2 transform -translate-x-1/2 bg-transparent rounded-full py-3 px-16 hover:cursor-pointer hover:bg-white hover:text-black transition duration-300 ease-in-out border border-white">
           <h1 className={`${roboto.className} font-roboto text-2xl`}>
             <Link href="/projects">All Projects</Link>
           </h1>
@@ -233,7 +237,9 @@ export default function ProjectPage() {
             Next
             <FaArrowRightLong />
           </span>
-          <span className={`${roboto.className} font-roboto text-5xl mx-16`}>
+          <span
+            className={`${roboto.className} font-roboto text-2xl lg:text-5xl mx-16`}
+          >
             {projects.indexOf(project) === projects.length - 1
               ? projects[0].title
               : projects[projects.indexOf(project) + 1]?.title}
