@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  ArrowRight04Icon,
-  ComputerProgramming01Icon,
-} from "@hugeicons/core-free-icons";
+import { ComputerProgramming01Icon } from "@hugeicons/core-free-icons";
 import { IoLanguageOutline } from "react-icons/io5";
 import { MdEmail, MdOutlineDesignServices } from "react-icons/md";
 import CarouselDemo from "@/components/ui/VerticalSlider";
@@ -51,16 +48,6 @@ export default function Home() {
               designer fluent in both code and human language. I build
               intuitive, beautiful interfaces from Brazil to wherever you are.
             </h1>
-            <Link
-              href="/about"
-              className={`${roboto.className} group uppercase font-roboto text-xl flex items-center gap-2 duration-300`}
-            >
-              More about me{" "}
-              <HugeiconsIcon
-                icon={ArrowRight04Icon}
-                className="transform duration-300 group-hover:translate-x-2"
-              />
-            </Link>
           </div>
         </div>
 
@@ -178,7 +165,7 @@ export default function Home() {
         </div>
       </main>
 
-      <div className="h-[40vh] text-white">
+      <div className="h-[40vh] text-white lg:mt-[10%]">
         <main className="container mx-auto flex flex-col md:flex-row h-full">
           <div className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16">
             <h1
