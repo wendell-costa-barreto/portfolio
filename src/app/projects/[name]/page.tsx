@@ -14,8 +14,6 @@ import { roboto } from "@/lib/utils";
 import Link from "next/link";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useEffect } from "react";
-import { getProjectMetadata } from "./action";
 type Project = {
   name: string;
   title: string;
