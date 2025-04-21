@@ -23,17 +23,17 @@ export default function Home() {
       <main className="overflow-hidden w-full">
         <div className="w-full md:w-[55%] h-[69vh] md:h-[40vh] flex justify-center items-center md:items-start flex-col ml-0 md:ml-[7%]">
           <h1
-            className={`${roboto.className} uppercase font-roboto text-7xl ml-[8%] `}
+            className={`${roboto.className} uppercase font-roboto text-6xl md:text-7xl ml-[8%] `}
           >
             Front End Developer{" "}
             <span
-              className={`${roboto.className} font-roboto uppercase text-7xl md:hidden`}
+              className={`${roboto.className} font-roboto uppercase text-6xl md:text-7xl md:hidden`}
             >
               and Designer
             </span>
           </h1>
           <h1
-            className={`${roboto.className} uppercase font-roboto text-5xl md:text-7xl hidden md:block`}
+            className={`${roboto.className} uppercase font-roboto text-6xl md:text-7xl hidden md:block`}
           >
             and Designer
           </h1>
@@ -111,8 +111,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[62vh] md:mt-[1%]">
-          <h1 className={`${roboto.className} uppercase font-roboto text-7xl`}>
+        <div className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[82vh] md:mt-[1%]">
+          <h1
+            className={`${roboto.className} uppercase font-roboto text-5xl md:text-7xl`}
+          >
             My projects
           </h1>
         </div>
@@ -154,11 +156,7 @@ export default function Home() {
           <div className="w-full flex justify-start items-center mt-[2%] flex-col lg:flex-row">
             <div className="ml-[5%] w-[80%]  lg:mt-0">
               <Link href={"/projects/cats"}>
-                <CarouselDemo
-                  propArray={Cats}
-                  title="Cat Races Gallery"
-                  href="cats"
-                />
+                <CarouselDemo propArray={Cats} title="Cat Races " href="cats" />
               </Link>
             </div>
           </div>

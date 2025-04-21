@@ -56,11 +56,7 @@ export default function ProjectsPage() {
         <div className="w-full flex justify-start items-center mt-[2%] flex-col lg:flex-row">
           <div className="ml-[5%] w-[80%]  lg:mt-0">
             <Link href={"/projects/cats"}>
-              <CarouselDemo
-                propArray={Cats}
-                title="Cat Races Gallery"
-                href="cats"
-              />
+              <CarouselDemo propArray={Cats} title="Cat Races" href="cats" />
             </Link>
           </div>
         </div>

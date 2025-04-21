@@ -43,7 +43,7 @@ export default function CarouselDemo({
             <div className="p-1 h-full">
               <div className="flex flex-col items-start h-full">
                 <h1
-                  className={`${roboto.className} text-2xl font-roboto uppercase text-white mb-2.5`}
+                  className={`${roboto.className} text-2xl font-roboto uppercase text-white mb-2.5 mr-[5%] md:mr-0`}
                 >
                   {title}
                 </h1>
@@ -61,9 +61,9 @@ export default function CarouselDemo({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="absolute right-[75px] top-[-30px] z-10">
-        <CarouselPrevious className="absolute right-[-55px] top-12 md:top-10 z-10 -translate-y-1/2 transform" />
-        <CarouselNext className="absolute right-[-55px] top-12 md:top-10 z-10 -translate-y-1/2 transform" />
+      <div className="absolute right-[45px] top-[-30px] z-10">
+        <CarouselPrevious className="absolute right-[-15px] md:right-[-55px] top-12 md:top-10 z-10 -translate-y-1/2 transform" />
+        <CarouselNext className="absolute right-[-25px] md:right-[-55px] top-12 md:top-10 z-10 -translate-y-1/2 transform" />
       </div>
     </Carousel>
   );
