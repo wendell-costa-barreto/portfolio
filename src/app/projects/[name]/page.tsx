@@ -74,7 +74,7 @@ const projects: Project[] = [
     description:
       "A fake cryptocurrency dashboard company website which users can utilise to check on the prices of cryptocurrencies, made to experiment with Next.js features.",
     techStack: ["Next.js", "Tailwind CSS"],
-    demo: "https://cryptocurrency-dashboard-ihhnoum38-wendell-costas-projects.vercel.app",
+    demo: "https://cryptocurrency-dashboard-flame.vercel.app/",
     text: {
       title: "Nexus Dashboard: Your Comprehensive Cryptocurrency Dashboard",
       text1:
@@ -140,9 +140,11 @@ export default function ProjectPage() {
           >
             {project.description}
             <br />
-            <Link href={project.demo} className="underline">
-              Live Demo
-            </Link>
+            {project.demo === "Not available" ? (
+              <span className="font-bold">Demo not available</span>
+            ) : (
+              <Link href={project.demo}>Demo</Link>
+            )}
           </h2>
           <h2
             className={`${roboto.className} font-roboto text-2xl mb-5 w-[90%] ml-[7%] lg:ml-0 lg:w-[30%]`}
