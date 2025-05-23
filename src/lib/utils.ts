@@ -13,30 +13,25 @@ export const VisitezLeQuebec: ImageProps[] = [
     id: "1",
   },
   {
-    alt: "Page on apresski",
-    src: "/portfolio-photos/visitezlequebec/apresski.jpg",
+    alt: "Second page of VisitezLeQuebec",
+    src: "/portfolio-photos/visitezlequebec/home2.jpg",
     id: "2",
   },
   {
-    alt: "Page on culture",
-    src: "/portfolio-photos/visitezlequebec/culture.jpg",
+    alt: "Third page of VisitezLeQuebec",
+    src: "/portfolio-photos/visitezlequebec/home3.jpg",
     id: "3",
   },
   {
-    alt: "A map of Québec",
-    src: "/portfolio-photos/visitezlequebec/map.jpg",
+    alt: "Fourth page of VisitezLeQuebec",
+    src: "/portfolio-photos/visitezlequebec/home4.jpg",
     id: "4",
   },
   {
-    alt: "Page on activities",
-    src: "/portfolio-photos/visitezlequebec/activities.jpg",
+    alt: "Fifth page of VisitezLeQuebec",
+    src: "/portfolio-photos/visitezlequebec/home5.jpg",
     id: "5",
-  },
-  {
-    alt: "Page on top destinations",
-    src: "/portfolio-photos/visitezlequebec/top_dest.jpg",
-    id: "6",
-  },
+  }
 ];
 
 export const NexusDashboard: ImageProps[] = [

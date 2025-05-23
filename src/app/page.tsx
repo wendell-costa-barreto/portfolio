@@ -15,15 +15,43 @@ import {
 } from "@/lib/utils";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 
 export default function Home() {
   const [email] = useState("wendellbarreto2007@gmail.com");
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf"; // file in public folder
+    link.download = "resume.pdf"; // name when downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <main className="overflow-hidden w-full">
-        <div className="w-full md:w-[55%] h-[69vh] md:h-[40vh] flex justify-center items-center md:items-start flex-col ml-0 md:ml-[7%]">
-          <h1
-            className={`${roboto.className} uppercase font-roboto text-6xl md:text-7xl ml-[8%] `}
+        <motion.div
+          className="w-full md:w-[55%] h-[69vh] md:h-[40vh] flex justify-center items-center md:items-start flex-col ml-0 md:ml-[7%]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h1
+            className={`${roboto.className} uppercase font-roboto text-6xl md:text-7xl ml-[8%]`}
+            variants={itemVariants}
           >
             Front End Developer{" "}
             <span
@@ -31,35 +59,63 @@ export default function Home() {
             >
               and Designer
             </span>
-          </h1>
-          <h1
+          </motion.h1>
+          <motion.h1
             className={`${roboto.className} uppercase font-roboto text-6xl md:text-7xl hidden md:block`}
+            variants={itemVariants}
           >
             and Designer
-          </h1>
-        </div>
+          </motion.h1>
+        </motion.div>
 
-        <div className="w-full h-[10vh] flex justify-end items-center">
-          <div className="mr-0 md:mr-[7%] flex flex-col items-center md:items-start space-y-2 max-w-md">
+        <motion.div
+          className="w-full h-[10vh] flex justify-end items-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div
+            className="mr-0 md:mr-[7%] flex flex-col items-center md:items-start space-y-2 max-w-md"
+            variants={itemVariants}
+          >
             <h1
-              className={`${roboto.className} uppercase font-roboto text-xl text-justify w-[80%]`}
+              className={`${roboto.className} uppercase font-roboto text-xl text-justify w-[80%] mb-6`}
             >
               Hey there, my name is Wendell, I&apos;m a front-end developer and
               designer fluent in both code and human language. I build
               intuitive, beautiful interfaces from Brazil to wherever you are.
             </h1>
-          </div>
-        </div>
+            <button
+              onClick={handleDownload}
+              className={`${roboto.className} flex gap-1 bg-white cursor-pointer justify-center text-black rounded-xl items-center px-4 py-2 uppercase font-roboto text-xl text-justify w-[55%]`}
+            >
+              Download Resume <ArrowDown />
+            </button>
+          </motion.div>
+        </motion.div>
 
-        <div className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[12%]">
+        <motion.div
+          className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[12%]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <h1 className={`${roboto.className} uppercase font-roboto text-7xl`}>
             My skillset
           </h1>
-        </div>
+        </motion.div>
 
-        <div className="w-full h-[40vh] flex justify-center items-center mb-[5%]">
+        <motion.div
+          className="w-full h-[40vh] flex justify-center items-center mb-[5%]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[84%] h-[40vh]">
-            <div className="flex flex-col justify-start items-center gap-8">
+            <motion.div
+              className="flex flex-col justify-start items-center gap-8"
+              variants={itemVariants}
+            >
               <h1
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
@@ -75,9 +131,12 @@ export default function Home() {
                 others as well as testing libraries such as Jest and React
                 Testing Library
               </p>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col justify-start items-center gap-8">
+            <motion.div
+              className="flex flex-col justify-start items-center gap-8"
+              variants={itemVariants}
+            >
               <h1
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
@@ -92,8 +151,11 @@ export default function Home() {
                 intermediate level in German, Japanese, and basic level in
                 Korean, Russian and Chinese
               </p>
-            </div>
-            <div className="flex flex-col justify-start items-center gap-8">
+            </motion.div>
+            <motion.div
+              className="flex flex-col justify-start items-center gap-8"
+              variants={itemVariants}
+            >
               <h1
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
@@ -107,65 +169,100 @@ export default function Home() {
                 Proficient in Figma, and versing tools such as Git and Github,
                 also with knowledge on UI/UX design concepts and best practices
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[82vh] md:mt-[1%]">
+        <motion.div
+          className="w-[55%] h-[40vh] flex justify-center items-start flex-col ml-[7%] mt-[82vh] md:mt-[1%]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <h1
             className={`${roboto.className} uppercase font-roboto text-5xl md:text-7xl`}
           >
             My projects
           </h1>
-        </div>
-        <div className="w-full flex justify-start items-center mt-[1%] flex-col gap-[3vh] mb-[2%]">
+        </motion.div>
+        <motion.div
+          className="w-full flex justify-start items-center mt-[1%] flex-col gap-[3vh] mb-[2%]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <div className="w-full flex justify-start items-center mt-[1%] flex-col lg:flex-row">
-            <div className="ml-[5%] w-[80%]">
+            <motion.div className="ml-[5%] w-[80%]" variants={itemVariants}>
               <CarouselDemo
                 propArray={VisitezLeQuebec}
                 title="Visitez Le Quebec"
                 href="visitezlequebec"
               />
-            </div>
-            <div className="w-[80%] h-full  lg:mt-0">
+            </motion.div>
+            <motion.div
+              className="w-[80%] h-full  lg:mt-0"
+              variants={itemVariants}
+            >
               <CarouselDemo
                 propArray={NexusDashboard}
                 title="Nexus Dashboard"
                 href="nexusdashboard"
               />
-            </div>
+            </motion.div>
           </div>
 
           <div className="w-full flex justify-start items-center mt-[1%] flex-col lg:flex-row">
-            <div className="ml-[5%] w-[80%]  lg:mt-0">
+            <motion.div
+              className="ml-[5%] w-[80%]  lg:mt-0"
+              variants={itemVariants}
+            >
               <CarouselDemo
                 propArray={SolarSystem}
                 title="3D Solar System"
                 href="solarsystem"
               />
-            </div>
-            <div className="w-[80%] h-full  lg:mt-0">
+            </motion.div>
+            <motion.div
+              className="w-[80%] h-full  lg:mt-0"
+              variants={itemVariants}
+            >
               <CarouselDemo
                 propArray={EldenRing}
                 title="Elden Ring"
                 href="eldenring"
               />
-            </div>
+            </motion.div>
           </div>
 
           <div className="w-full flex justify-start items-center mt-[2%] flex-col lg:flex-row">
-            <div className="ml-[5%] w-[80%]  lg:mt-0">
+            <motion.div
+              className="ml-[5%] w-[80%]  lg:mt-0"
+              variants={itemVariants}
+            >
               <Link href={"/projects/cats"}>
-                <CarouselDemo propArray={Cats} title="Cat Races " href="cats" />
+                <CarouselDemo propArray={Cats} title="Cat Races" href="cats" />
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </main>
 
-      <div className="h-[40vh] text-white lg:mt-[10%]">
-        <main className="container mx-auto flex flex-col md:flex-row h-full">
-          <div className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16">
+      <motion.div
+        className="h-[40vh] text-white lg:mt-[10%]"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.main
+          className="container mx-auto flex flex-col md:flex-row h-full"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div
+            className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16"
+            variants={itemVariants}
+          >
             <h1
               className={`text-4xl md:text-5xl font-bold tracking-tight ${roboto.className}`}
             >
@@ -185,9 +282,12 @@ export default function Home() {
               </div>
               <span className="ml-3 text-sm">Wendell Barreto</span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16">
+          <motion.div
+            className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16"
+            variants={itemVariants}
+          >
             <div className="space-y-6">
               <div className="flex items-center">
                 <div className="h-8 w-8 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center opacity-90">
@@ -240,9 +340,9 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </div>
-        </main>
-      </div>
+          </motion.div>
+        </motion.main>
+      </motion.div>
     </>
   );
 }

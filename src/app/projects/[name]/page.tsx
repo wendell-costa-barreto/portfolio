@@ -12,8 +12,9 @@ import { ImageProps } from "@/components/ui/VerticalSlider";
 import Image from "next/image";
 import { roboto } from "@/lib/utils";
 import Link from "next/link";
-import { FaArrowLeftLong } from "react-icons/fa6";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
 type Project = {
   name: string;
   title: string;
@@ -37,7 +38,7 @@ const projects: Project[] = [
     title: "Visitez le Québec",
     images: VisitezLeQuebec,
     description:
-      "A fake tourism agency website incentivating tourists to visit Quebec, made to experiment with React features.",
+      "An interactive travel promotion website (currently under development)",
     techStack: [`React`, "Tailwind CSS"],
     demo: "https://visitez-le-quebec.vercel.app",
     text: {
@@ -46,23 +47,22 @@ const projects: Project[] = [
       text1:
         "At Visitez le Québec, we aim to inspire travelers to discover the stunning beauty, rich culture, and vibrant history of Québec, Canada. Our website serves as a comprehensive resource for exploring this magnificent province, showcasing a variety of activities, popular destinations, and unique cultural experiences.",
       text2:
-        "Québec is home to diverse landscapes, from the historic charm of Old Québec City to the natural beauty of the Laurentians. Our site highlights must-visit destinations, including the cobblestone streets of Old Montréal, the breathtaking Mont Tremblant, and the scenic Gaspé Peninsula. Each destination is accompanied by detailed guides to help you plan your perfect trip.",
+        "The project Visitez le Québec was refactored with a more modern approach turning it into an interactive website with more features with a bolder UI still scoring 90+ in all metrics (performance, SEO, best practices and accessibility).",
       text3:
-        "Visitez le Québec is designed with modern web technologies, utilizing React for a fast and responsive experience. Tailwind CSS ensures a sleek and user-friendly interface, while MapTiler provides interactive maps to help you navigate the province. The Embla Carousel feature showcases stunning images of Québec's landscapes and cultural events.",
+        "Visitez le Québec is designed with modern web technologies, utilizing React for a fast and responsive experience. Tailwind CSS ensures a sleek and user-friendly interface, while Leaflet provides interactive maps to help you navigate the province. The Swiper sliders feature showcases stunning images of Québec's landscapes and cultural events.",
     },
   },
   {
     name: "solarsystem",
     title: "Solar System",
     images: SolarSystem,
-    description:
-      "A 3D model of the solar system, made to experiment with Three.js and GLTF models.",
+    description: "A 3D model of the solar system",
     techStack: ["Three.js", "GLTF"],
     demo: "https://solar-system-plum.vercel.app",
     text: {
       title: "3D Model of the Solar System",
       text1:
-        "This project is a 3D model of the solar system, made to experiment with Three.js and GLTF models. It features a dynamic sun and planets, as well as orbital paths and rotations with each planet's circumference",
+        "This project is a 3D model of the solar system, created using Three.js. It features a dynamic sun and planets, as well as orbital paths and rotations with each planet's circumference",
       text2: undefined,
       text3: undefined,
     },
@@ -71,18 +71,17 @@ const projects: Project[] = [
     name: "nexusdashboard",
     title: "Nexus Dashboard",
     images: NexusDashboard,
-    description:
-      "A fake cryptocurrency dashboard company website which users can utilise to check on the prices of cryptocurrencies, made to experiment with Next.js features.",
+    description: "A cryptocurrency dashboard website ",
     techStack: ["Next.js", "Tailwind CSS"],
     demo: "https://cryptocurrency-dashboard-flame.vercel.app/",
     text: {
       title: "Nexus Dashboard: Your Comprehensive Cryptocurrency Dashboard",
       text1:
-        "The Nexus Dashboard serves as a powerful tool for visualizing the 100 most popular cryptocurrencies, providing users with comprehensive insights into their values, fluctuations, and historical performance. This dashboard presents essential data, including maximum and minimum values, as well as Open, High, Low, and Close (OHLC) values, all displayed through interactive charts that enhance user engagement and understanding.",
+        "The Nexus Dashboard serves as a powerful tool for visualizing the  most popular cryptocurrencies, providing users with comprehensive insights into their values, fluctuations, and historical performance. This dashboard presents essential data, including maximum and minimum values, as well as Open, High, Low, and Close (OHLC) values, all displayed through interactive charts that enhance user engagement and understanding. Designed an intuitive, user-centered dashboard that achieved 100/100 perfect scores on Lighthouse metrics for performance, search engine optimization (SEO), best practices, and accessibility.",
       text2:
-        "With its user-friendly interface, the Nexus Dashboard allows for seamless navigation and analysis of cryptocurrency trends, enabling users to make informed decisions based on real-time data. The integration of various charting options facilitates a deeper exploration of market dynamics, empowering both novice and experienced traders to track performance and identify potential investment opportunities effectively. By consolidating critical information in one accessible platform, the Nexus Dashboard stands out as an invaluable resource for anyone interested in the cryptocurrency market.",
+        "Engineered a portfolio where users can track their digital wallet and calculate the corresponding value for their cryptocurrencies, leveraging average session duration by 34% utilizing CoinGecko API and Supabase for the backend.",
       text3:
-        "It's completely responsive, built with Next.js along with Tailwind deployed to Vercel, depending as well in the CoinGecko API to fetch the data, and React-Google-Charts and ApexCharts to display the charts.",
+        "By using static rendering and optimization with images and unused JavaScript, achieved 97% GTMetrix performance and sub-1s LCP, ensuring elite user experience and rapid load times for real-time financial data.",
     },
   },
   {
@@ -128,7 +127,12 @@ export default function ProjectPage() {
 
   return (
     <>
-      <div className="w-full h-[10vh] flex justify-center items-start flex-col mb-[12%] mt-[23vh] lg:mt-[15vh]">
+      <motion.div
+        className="w-full h-[10vh] flex justify-center items-start flex-col mb-[12%] mt-[23vh] lg:mt-[15vh]"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <h1
           className={`${roboto.className} uppercase font-roboto text-3xl mb-5 ml-[7%] font-bold`}
         >
@@ -143,7 +147,9 @@ export default function ProjectPage() {
             {project.demo === "Not available" ? (
               <span className="font-bold">Demo not available</span>
             ) : (
-              <Link href={project.demo}>Demo</Link>
+              <Link href={project.demo} className="font-bold underline">
+                Demo
+              </Link>
             )}
           </h2>
           <h2
@@ -153,8 +159,13 @@ export default function ProjectPage() {
             <br /> {project.techStack.join(", ")}
           </h2>
         </div>
-      </div>
-      <div className="w-full h-full flex flex-col justify-center items-center gap-6 mt-[20vh]">
+      </motion.div>
+      <motion.div
+        className="w-full h-full flex flex-col justify-center items-center gap-6 mt-[20vh]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
         {project.images.map((image) => (
           <Image
             key={image.id}
@@ -165,9 +176,14 @@ export default function ProjectPage() {
             className="object-cover"
           />
         ))}
-      </div>
+      </motion.div>
 
-      <div className="w-full h-[60%] flex justify-center items-center my-[15%] lg:my-[5%]">
+      <motion.div
+        className="w-full h-[60%] flex justify-center items-center my-[15%] lg:my-[5%]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
         <div className="flex flex-col gap-4 w-full justify-center items-center">
           <h1
             className={`${roboto.className} font-roboto text-3xl mb-16 w-[85%] lg:w-full text-center`}
@@ -194,9 +210,14 @@ export default function ProjectPage() {
             </p>
           )}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="w-full flex justify-between items-center h-[15vh] relative mb-[7vh] mt-[20vh] lg:mt-0">
+      <motion.div
+        className="w-full flex justify-between items-center h-[15vh] relative mb-[7vh] mt-[20vh] lg:mt-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
         <Link
           href={
             projects.indexOf(project) === 0
@@ -246,7 +267,7 @@ export default function ProjectPage() {
               : projects[projects.indexOf(project) + 1]?.title}
           </span>
         </Link>
-      </div>
+      </motion.div>
     </>
   );
 }
