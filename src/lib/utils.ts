@@ -51,14 +51,28 @@ export const NexusDashboard: ImageProps[] = [
     id: "3",
   },
   {
-    alt: "Page on table",
-    src: "/portfolio-photos/nexus/table.jpg",
+    alt: "Page on dashboard",
+    src: "/portfolio-photos/nexus/dashboard2.jpg",
     id: "4",
   },
   {
-    alt: "Page on charts",
-    src: "/portfolio-photos/nexus/charts.jpg",
+    alt: "Page on login",
+    src: "/portfolio-photos/nexus/login.jpg",
     id: "5",
+  },
+    {
+    alt: "Page on signup",
+    src: "/portfolio-photos/nexus/signup.jpg",
+    id: "6",
+  },  {
+    alt: "Page on portfolio",
+    src: "/portfolio-photos/nexus/portfolio.jpg",
+    id: "7",
+  },
+    {
+    alt: "Page on adding holdings",
+    src: "/portfolio-photos/nexus/addHolding.jpg",
+    id: "8",
   },
 ];
 
