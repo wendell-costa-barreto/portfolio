@@ -148,7 +148,7 @@ export default function ProjectPage() {
               <span className="font-bold">Demo not available</span>
             ) : (
               <Link href={project.demo} className="font-bold underline">
-                Demo
+                Live Demo
               </Link>
             )}
           </h2>

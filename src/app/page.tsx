@@ -120,16 +120,16 @@ export default function Home() {
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
                 <HugeiconsIcon icon={ComputerProgramming01Icon} size={36} />
-                Front End Developing
+                Front End Development
               </h1>
 
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Proficient in HTML, CSS, Javascript, Typescript, React, Next.JS
-                and lesser frameworks/libraries such as Tailwind, Shadcn/ui and
-                others as well as testing libraries such as Jest and React
-                Testing Library
+                Skilled in HTML, CSS, TypeScript, React, and Next.js, along with
+                additional frameworks and libraries like Tailwind CSS and
+                Shadcn/ui. Experienced in testing with Jest and React Testing
+                Library.
               </p>
             </motion.div>
 
@@ -149,7 +149,7 @@ export default function Home() {
               >
                 Fluent in Portuguese, English, Spanish and French, with
                 intermediate level in German, Japanese, and basic level in
-                Korean, Russian and Chinese
+                Russian and Chinese
               </p>
             </motion.div>
             <motion.div
@@ -160,13 +160,13 @@ export default function Home() {
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
                 <MdOutlineDesignServices size={36} />
-                UI/UX Design and Versing Tools
+                UI/UX Design and Versioning Tools
               </h1>
 
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Proficient in Figma, and versing tools such as Git and Github,
+                Proficient in Figma and versioning tools such as Git and Github,
                 also with knowledge on UI/UX design concepts and best practices
               </p>
             </motion.div>
