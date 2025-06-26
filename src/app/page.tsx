@@ -120,16 +120,16 @@ export default function Home() {
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
                 <HugeiconsIcon icon={ComputerProgramming01Icon} size={36} />
-                Front End Development
+                Fullstack Development
               </h1>
 
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
                 Experienced in building responsive apps using React, Next.js,
-                TypeScript, and Tailwind CSS. Familiar with modern UI libraries
-                (Shadcn/UI) and testing tools like Jest and React Testing
-                Library.
+                Express.js, MongoDB TypeScript, and Tailwind CSS. Familiar with
+                modern UI libraries (Shadcn/UI) and testing tools like Jest and
+                React Testing Library.
               </p>
             </motion.div>
 
