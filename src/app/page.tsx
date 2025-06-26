@@ -81,9 +81,9 @@ export default function Home() {
             <h1
               className={`${roboto.className} uppercase font-roboto text-xl text-justify w-[80%] mb-6`}
             >
-              Hey there, my name is Wendell, I&apos;m a front-end developer and
-              designer fluent in both code and human language. I build
-              intuitive, beautiful interfaces from Brazil to wherever you are.
+              Hi, I’m Wendell — a front-end developer and designer who builds
+              fast, beautiful, and user-focused interfaces. Based in Brazil,
+              working worldwide.
             </h1>
             <button
               onClick={handleDownload}
@@ -126,9 +126,9 @@ export default function Home() {
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Skilled in HTML, CSS, TypeScript, React, and Next.js, along with
-                additional frameworks and libraries like Tailwind CSS and
-                Shadcn/ui. Experienced in testing with Jest and React Testing
+                Experienced in building responsive apps using React, Next.js,
+                TypeScript, and Tailwind CSS. Familiar with modern UI libraries
+                (Shadcn/UI) and testing tools like Jest and React Testing
                 Library.
               </p>
             </motion.div>
@@ -147,9 +147,8 @@ export default function Home() {
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Fluent in Portuguese, English, Spanish and French, with
-                intermediate level in German, Japanese, and basic level in
-                Russian and Chinese
+                Fluent in Portuguese, English, and Spanish. Intermediate in
+                French, German, and Japanese; basic in Russian and Chinese.
               </p>
             </motion.div>
             <motion.div
@@ -166,8 +165,8 @@ export default function Home() {
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Proficient in Figma and versioning tools such as Git and Github,
-                also with knowledge on UI/UX design concepts and best practices
+                Skilled with Figma, Git, and GitHub. Solid understanding of
+                UI/UX principles and design best practices.
               </p>
             </motion.div>
           </div>
@@ -266,15 +265,13 @@ export default function Home() {
             <h1
               className={`text-4xl md:text-5xl font-bold tracking-tight ${roboto.className}`}
             >
-              LET&apos;S WORK
-              <br />
-              TOGETHER
+              I’m open to freelance, contract, or full-time opportunities.
             </h1>
             <div className="h-1 w-48 bg-gradient-to-r from-indigo-600 to-purple-600 mt-4 mb-6"></div>
             <p className={`text-gray-300 max-w-md ${roboto.className}`}>
-              Developing innovative solutions
+              Turning ideas into elegant,
               <br />
-              for tomorrow&apos;s challenges
+              user-friendly apps.
             </p>
             <div className="mt-12 flex items-center">
               <div className="h-8 w-8 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center">
