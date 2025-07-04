@@ -33,8 +33,8 @@ export default function Home() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; // file in public folder
-    link.download = "resume.pdf"; // name when downloaded
+    link.href = "/curriculo_ptbr.pdf";
+    link.download = "curriculo_ptbr.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -53,18 +53,18 @@ export default function Home() {
             className={`${roboto.className} uppercase font-roboto text-6xl md:text-7xl ml-[8%]`}
             variants={itemVariants}
           >
-            Front End Developer{" "}
+            Desenvolvedor Front-End{" "}
             <span
               className={`${roboto.className} font-roboto uppercase text-6xl md:text-7xl md:hidden`}
             >
-              and Designer
+              e Designer
             </span>
           </motion.h1>
           <motion.h1
             className={`${roboto.className} uppercase font-roboto text-6xl md:text-7xl hidden md:block`}
             variants={itemVariants}
           >
-            and Designer
+            e Designer
           </motion.h1>
         </motion.div>
 
@@ -81,15 +81,15 @@ export default function Home() {
             <h1
               className={`${roboto.className} uppercase font-roboto text-xl text-justify w-[80%] mb-6`}
             >
-              Hi, I’m Wendell — a front-end developer and designer who builds
-              fast, beautiful, and user-focused interfaces. Based in Brazil,
-              working worldwide.
+              Olá, sou Wendell — um desenvolvedor front-end e designer que cria
+              interfaces rápidas, bonitas e centradas no usuário. Baseado no
+              Brasil, trabalhando globalmente.
             </h1>
             <button
               onClick={handleDownload}
               className={`${roboto.className} flex gap-1 bg-white cursor-pointer justify-center text-black rounded-xl items-center px-4 py-2 uppercase font-roboto text-xl text-justify w-[55%]`}
             >
-              Download Resume <ArrowDown />
+              Baixar Currículo <ArrowDown />
             </button>
           </motion.div>
         </motion.div>
@@ -101,7 +101,7 @@ export default function Home() {
           animate="visible"
         >
           <h1 className={`${roboto.className} uppercase font-roboto text-7xl`}>
-            My skillset
+            Minhas habilidades
           </h1>
         </motion.div>
 
@@ -120,16 +120,16 @@ export default function Home() {
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
                 <HugeiconsIcon icon={ComputerProgramming01Icon} size={36} />
-                Fullstack Development
+                Desenvolvimento Fullstack
               </h1>
 
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Experienced in building responsive apps using React, Next.js,
-                Express.js, MongoDB TypeScript, and Tailwind CSS. Familiar with
-                modern UI libraries (Shadcn/UI) and testing tools like Jest and
-                React Testing Library.
+                Experiência em criação de apps responsivos com React, Next.js,
+                Express.js, MongoDB, TypeScript e Tailwind CSS. Familiaridade
+                com bibliotecas modernas (Shadcn/UI) e ferramentas de teste como
+                Jest e React Testing Library.
               </p>
             </motion.div>
 
@@ -141,16 +141,17 @@ export default function Home() {
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
                 <IoLanguageOutline size={36} />
-                Language Skills
+                Habilidades Linguísticas
               </h1>
 
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Fluent in Portuguese, English, and Spanish. Intermediate in
-                French, German, and Japanese; basic in Russian and Chinese.
+                Fluente em Português, Inglês e Espanhol. Intermediário em
+                Francês, Alemão e Japonês; básico em Russo e Chinês.
               </p>
             </motion.div>
+
             <motion.div
               className="flex flex-col justify-start items-center gap-8"
               variants={itemVariants}
@@ -159,14 +160,14 @@ export default function Home() {
                 className={`${roboto.className} uppercase font-roboto text-3xl mt-[5%] flex items-center gap-4`}
               >
                 <MdOutlineDesignServices size={36} />
-                UI/UX Design and Versioning Tools
+                UI/UX e Versionamento
               </h1>
 
               <p
                 className={`${roboto.className} font-roboto text-xl text-justify w-[75%]`}
               >
-                Skilled with Figma, Git, and GitHub. Solid understanding of
-                UI/UX principles and design best practices.
+                Domínio de Figma, Git e GitHub. Sólido entendimento de
+                princípios de UI/UX e melhores práticas de design.
               </p>
             </motion.div>
           </div>
@@ -181,9 +182,10 @@ export default function Home() {
           <h1
             className={`${roboto.className} uppercase font-roboto text-5xl md:text-7xl`}
           >
-            My projects
+            Meus projetos
           </h1>
         </motion.div>
+
         <motion.div
           className="w-full flex justify-start items-center mt-[1%] flex-col gap-[3vh] mb-[2%]"
           variants={containerVariants}
@@ -217,7 +219,7 @@ export default function Home() {
             >
               <CarouselDemo
                 propArray={SolarSystem}
-                title="3D Solar System"
+                title="Sistema Solar 3D"
                 href="solarsystem"
               />
             </motion.div>
@@ -239,7 +241,11 @@ export default function Home() {
               variants={itemVariants}
             >
               <Link href={"/projects/cats"}>
-                <CarouselDemo propArray={Cats} title="Cat Races" href="cats" />
+                <CarouselDemo
+                  propArray={Cats}
+                  title="Raças de Gatos"
+                  href="cats"
+                />
               </Link>
             </motion.div>
           </div>
@@ -265,13 +271,13 @@ export default function Home() {
             <h1
               className={`text-4xl md:text-5xl font-bold tracking-tight ${roboto.className}`}
             >
-              I’m open to freelance, contract, or full-time opportunities.
+              Estou aberto a oportunidades como freelancer, contrato ou tempo
+              integral.
             </h1>
             <div className="h-1 w-48 bg-gradient-to-r from-indigo-600 to-purple-600 mt-4 mb-6"></div>
             <p className={`text-gray-300 max-w-md ${roboto.className}`}>
-              Turning ideas into elegant,
-              <br />
-              user-friendly apps.
+              Transformando ideias em apps elegantes
+              <br />e fáceis de usar.
             </p>
             <div className="mt-12 flex items-center">
               <div className="h-8 w-8 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center">
@@ -315,7 +321,7 @@ export default function Home() {
                   <FaLinkedin />
                 </div>
                 <a
-                  href="www.linkedin.com/in/wendell-costa-barreto-junior"
+                  href="/www.linkedin.com/in/wendell-costa-barreto-junior"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-4 hover:text-indigo-400 transition"

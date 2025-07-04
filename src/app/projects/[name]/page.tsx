@@ -38,31 +38,31 @@ const projects: Project[] = [
     title: "Visitez le Québec",
     images: VisitezLeQuebec,
     description:
-      "An interactive travel promotion website (currently under development)",
+      "Um site interativo de promoção turística (em desenvolvimento)",
     techStack: [`React`, "Tailwind CSS"],
     demo: "https://visitez-le-quebec.vercel.app",
     text: {
       title:
-        "Welcome to Visitez le Québec: Your Guide to Exploring Québec, Canada",
+        "Bem-vindo ao Visitez le Québec: Seu Guia para Explorar o Québec, Canadá",
       text1:
-        "At Visitez le Québec, we aim to inspire travelers to discover the stunning beauty, rich culture, and vibrant history of Québec, Canada. Our website serves as a comprehensive resource for exploring this magnificent province, showcasing a variety of activities, popular destinations, and unique cultural experiences.",
+        "No Visitez le Québec, nosso objetivo é inspirar viajantes a descobrir a beleza deslumbrante, a cultura rica e a vibrante história do Québec, Canadá. Nosso site serve como um recurso completo para explorar esta magnífica província, apresentando uma variedade de atividades, destinos populares e experiências culturais únicas.",
       text2:
-        "The project Visitez le Québec was refactored with a more modern approach turning it into an interactive website with more features with a bolder UI still scoring 90+ in all metrics (performance, SEO, best practices and accessibility).",
+        "O projeto Visitez le Québec foi refatorado com uma abordagem mais moderna, transformando-se em um site interativo com mais recursos e uma interface mais ousada, mantendo pontuações acima de 90 em todas as métricas (desempenho, SEO, boas práticas e acessibilidade).",
       text3:
-        "Visitez le Québec is designed with modern web technologies, utilizing React for a fast and responsive experience. Tailwind CSS ensures a sleek and user-friendly interface, while Leaflet provides interactive maps to help you navigate the province. The Swiper sliders feature showcases stunning images of Québec's landscapes and cultural events.",
+        "O Visitez le Québec foi desenvolvido com tecnologias modernas da web, utilizando React para uma experiência rápida e responsiva. O Tailwind CSS garante uma interface elegante e amigável, enquanto o Leaflet oferece mapas interativos para ajudar na navegação pela província. Os sliders com Swiper apresentam imagens impressionantes das paisagens e eventos culturais do Québec.",
     },
   },
   {
     name: "solarsystem",
-    title: "Solar System",
+    title: "Sistema Solar",
     images: SolarSystem,
-    description: "A 3D model of the solar system",
+    description: "Um modelo 3D do sistema solar",
     techStack: ["Three.js", "GLTF"],
     demo: "https://solar-system-plum.vercel.app",
     text: {
-      title: "3D Model of the Solar System",
+      title: "Modelo 3D do Sistema Solar",
       text1:
-        "This project is a 3D model of the solar system, created using Three.js. It features a dynamic sun and planets, as well as orbital paths and rotations with each planet's circumference",
+        "Este projeto é um modelo 3D do sistema solar, criado com Three.js. Ele apresenta um sol dinâmico e planetas com trajetórias orbitais e rotações conforme a circunferência de cada planeta.",
       text2: undefined,
       text3: undefined,
     },
@@ -71,17 +71,17 @@ const projects: Project[] = [
     name: "nexusdashboard",
     title: "Nexus Dashboard",
     images: NexusDashboard,
-    description: "A cryptocurrency dashboard website ",
+    description: "Um painel de criptomoedas",
     techStack: ["Next.js", "Tailwind CSS"],
     demo: "https://cryptocurrency-dashboard-flame.vercel.app/",
     text: {
-      title: "Nexus Dashboard: Your Comprehensive Cryptocurrency Dashboard",
+      title: "Nexus Dashboard: Seu Painel Completo de Criptomoedas",
       text1:
-        "The Nexus Dashboard serves as a powerful tool for visualizing the  most popular cryptocurrencies, providing users with comprehensive insights into their values, fluctuations, and historical performance. This dashboard presents essential data, including maximum and minimum values, as well as Open, High, Low, and Close (OHLC) values, all displayed through interactive charts that enhance user engagement and understanding. Designed an intuitive, user-centered dashboard that achieved 100/100 perfect scores on Lighthouse metrics for performance, search engine optimization (SEO), best practices, and accessibility.",
+        "O Nexus Dashboard é uma poderosa ferramenta para visualizar as criptomoedas mais populares, fornecendo aos usuários insights abrangentes sobre seus valores, flutuações e desempenho histórico. O painel apresenta dados essenciais, incluindo valores máximos e mínimos, bem como valores de Abertura, Máxima, Mínima e Fechamento (OHLC), todos exibidos por meio de gráficos interativos que aumentam o engajamento e a compreensão do usuário. Foi projetado um painel intuitivo e centrado no usuário que alcançou pontuações perfeitas de 100/100 no Lighthouse para desempenho, SEO, boas práticas e acessibilidade.",
       text2:
-        "Engineered a portfolio where users can track their digital wallet and calculate the corresponding value for their cryptocurrencies, leveraging average session duration by 34% utilizing CoinGecko API and Supabase for the backend.",
+        "Foi desenvolvido um portfólio onde os usuários podem acompanhar sua carteira digital e calcular o valor correspondente das suas criptomoedas, aumentando a duração média da sessão em 34%, utilizando a API da CoinGecko e Supabase no backend.",
       text3:
-        "By using static rendering and optimization with images and unused JavaScript, achieved 97% GTMetrix performance and sub-1s LCP, ensuring elite user experience and rapid load times for real-time financial data.",
+        "Com renderização estática e otimizações em imagens e JavaScript não utilizado, alcançou-se 97% de desempenho no GTMetrix e LCP inferior a 1 segundo, garantindo uma experiência de usuário excelente e tempos de carregamento extremamente rápidos para dados financeiros em tempo real.",
     },
   },
   {
@@ -89,28 +89,29 @@ const projects: Project[] = [
     title: "Elden Ring",
     images: EldenRing,
     description:
-      "A replica of the game Elden Ring's UI, made when still learning HTML and CSS.",
+      "Uma réplica da interface do jogo Elden Ring, feita durante o aprendizado de HTML e CSS.",
     techStack: ["HTML", "CSS"],
     demo: "Not available",
     text: {
-      title: "Elden Ring UI Replica",
+      title: "Réplica da Interface do Elden Ring",
       text1:
-        "A replica of the game Elden Ring's starting UI and the class creation screen. This project was made to learn by experimenting with HTML and CSS.",
+        "Uma réplica da interface inicial e da tela de criação de classes do jogo Elden Ring. Este projeto foi feito para aprender através da prática com HTML e CSS.",
       text2: undefined,
       text3: undefined,
     },
   },
   {
     name: "cats",
-    title: "Cats",
+    title: "Gatos",
     images: Cats,
-    description: "A website about cats, made when still learning HTML and CSS.",
+    description:
+      "Um site sobre gatos, feito durante o aprendizado de HTML e CSS.",
     techStack: ["HTML", "CSS"],
     demo: "Not available",
     text: {
-      title: "Cat Race Wiki",
+      title: "Wiki de Raças de Gatos",
       text1:
-        "This website showcases 14 races of cats in swedish. It was made to learn by experimenting with HTML and CSS.",
+        "Este site apresenta 14 raças de gatos em sueco. Foi desenvolvido como prática para aprender HTML e CSS.",
       text2: undefined,
       text3: undefined,
     },
