@@ -31,6 +31,11 @@ export const VisitezLeQuebec: ImageProps[] = [
     alt: "Fifth page of VisitezLeQuebec",
     src: "/portfolio-photos/visitezlequebec/home5.jpg",
     id: "5",
+  },
+  {
+    alt: "Sixth page of VisitezLeQuebec",
+    src: "/portfolio-photos/visitezlequebec/deplacer.png",
+    id: "6",
   }
 ];
 
