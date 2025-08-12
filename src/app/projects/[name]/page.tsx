@@ -7,6 +7,7 @@ import {
   NexusDashboard,
   EldenRing,
   Cats,
+  Horizon,
 } from "@/lib/utils";
 import { ImageProps } from "@/components/ui/VerticalSlider";
 import Image from "next/image";
@@ -38,31 +39,30 @@ const projects: Project[] = [
     title: "Visitez le Québec",
     images: VisitezLeQuebec,
     description:
-      "Um site interativo de promoção turística (em desenvolvimento)",
+      "An interactive touristic mobile-first website for Quebec, Canada",
     techStack: [`React`, "Tailwind CSS"],
-    demo: "https://visitez-le-quebec.vercel.app",
+    demo: "https://https://quebec-yhjt.vercel.app",
     text: {
       title:
-        "Bem-vindo ao Visitez le Québec: Seu Guia para Explorar o Québec, Canadá",
-      text1:
-        "No Visitez le Québec, nosso objetivo é inspirar viajantes a descobrir a beleza deslumbrante, a cultura rica e a vibrante história do Québec, Canadá. Nosso site serve como um recurso completo para explorar esta magnífica província, apresentando uma variedade de atividades, destinos populares e experiências culturais únicas.",
+        "Welcome to Visitez le Québec: Your Guide to Exploring Québec, Canada",
+      text1: "",
       text2:
-        "O projeto Visitez le Québec foi refatorado com uma abordagem mais moderna, transformando-se em um site interativo com mais recursos e uma interface mais ousada, mantendo pontuações acima de 90 em todas as métricas (desempenho, SEO, boas práticas e acessibilidade).",
+        "The Visitez le Québec project was refactored with a more modern approach, transforming into an interactive website with more features and a bolder interface, maintaining scores above 90 in all metrics (performance, SEO, best practices, and accessibility).",
       text3:
-        "O Visitez le Québec foi desenvolvido com tecnologias modernas da web, utilizando React para uma experiência rápida e responsiva. O Tailwind CSS garante uma interface elegante e amigável, enquanto o Leaflet oferece mapas interativos para ajudar na navegação pela província. Os sliders com Swiper apresentam imagens impressionantes das paisagens e eventos culturais do Québec.",
+        "Visitez le Québec was developed with modern web technologies, using React for a fast and responsive experience. Tailwind CSS ensures a beautiful and user-friendly interface, while Leaflet provides interactive maps to help navigate the province. The Swiper sliders display impressive images of the landscapes and cultural events of Québec.",
     },
   },
   {
     name: "solarsystem",
-    title: "Sistema Solar",
+    title: "3D Solar System Model",
     images: SolarSystem,
-    description: "Um modelo 3D do sistema solar",
+    description: "A 3D model of the solar system",
     techStack: ["Three.js", "GLTF"],
     demo: "https://solar-system-plum.vercel.app",
     text: {
-      title: "Modelo 3D do Sistema Solar",
+      title: "3D Solar System Model",
       text1:
-        "Este projeto é um modelo 3D do sistema solar, criado com Three.js. Ele apresenta um sol dinâmico e planetas com trajetórias orbitais e rotações conforme a circunferência de cada planeta.",
+        "This project is a 3D model of the solar system, created with Three.js. It features a dynamic sun and planets with orbital trajectories and rotations according to each planet's circumference.",
       text2: undefined,
       text3: undefined,
     },
@@ -71,17 +71,17 @@ const projects: Project[] = [
     name: "nexusdashboard",
     title: "Nexus Dashboard",
     images: NexusDashboard,
-    description: "Um painel de criptomoedas",
+    description: "A cryptocurrency dashboard",
     techStack: ["Next.js", "Tailwind CSS"],
     demo: "https://cryptocurrency-dashboard-flame.vercel.app/",
     text: {
-      title: "Nexus Dashboard: Seu Painel Completo de Criptomoedas",
+      title: "Nexus Dashboard: Your Comprehensive Cryptocurrency Panel",
       text1:
-        "O Nexus Dashboard é uma poderosa ferramenta para visualizar as criptomoedas mais populares, fornecendo aos usuários insights abrangentes sobre seus valores, flutuações e desempenho histórico. O painel apresenta dados essenciais, incluindo valores máximos e mínimos, bem como valores de Abertura, Máxima, Mínima e Fechamento (OHLC), todos exibidos por meio de gráficos interativos que aumentam o engajamento e a compreensão do usuário. Foi projetado um painel intuitivo e centrado no usuário que alcançou pontuações perfeitas de 100/100 no Lighthouse para desempenho, SEO, boas práticas e acessibilidade.",
+        "The Nexus Dashboard is a powerful tool for visualizing popular cryptocurrencies, providing users with comprehensive insights into their values, fluctuations, and historical performance. The panel displays essential data, including maximum and minimum values, as well as Open, High, Low, and Close (OHLC) values, all displayed through interactive charts that increase user engagement and understanding. It was designed with an intuitive and user-centered approach that achieved perfect scores of 100/100 in Lighthouse for performance, SEO, best practices, and accessibility.",
       text2:
-        "Foi desenvolvido um portfólio onde os usuários podem acompanhar sua carteira digital e calcular o valor correspondente das suas criptomoedas, aumentando a duração média da sessão em 34%, utilizando a API da CoinGecko e Supabase no backend.",
+        "A portfolio was developed where users can track their digital wallet and calculate the corresponding value of their cryptocurrencies, increasing the average session duration by 34%, using the CoinGecko API and Supabase on the backend.",
       text3:
-        "Com renderização estática e otimizações em imagens e JavaScript não utilizado, alcançou-se 97% de desempenho no GTMetrix e LCP inferior a 1 segundo, garantindo uma experiência de usuário excelente e tempos de carregamento extremamente rápidos para dados financeiros em tempo real.",
+        "With static rendering and optimizations in images and unused JavaScript, we achieved 97% performance in GTMetrix and LCP below 1 second, ensuring an excellent user experience and extremely fast loading times for real-time financial data.",
     },
   },
   {
@@ -89,29 +89,44 @@ const projects: Project[] = [
     title: "Elden Ring",
     images: EldenRing,
     description:
-      "Uma réplica da interface do jogo Elden Ring, feita durante o aprendizado de HTML e CSS.",
+      "A replica of the Elden Ring game interface, made during the learning process of HTML and CSS.",
     techStack: ["HTML", "CSS"],
     demo: "Not available",
     text: {
-      title: "Réplica da Interface do Elden Ring",
+      title: "Elden Ring Interface Replica",
       text1:
-        "Uma réplica da interface inicial e da tela de criação de classes do jogo Elden Ring. Este projeto foi feito para aprender através da prática com HTML e CSS.",
+        "A replica of the initial interface and character creation screen of the Elden Ring game. This project was done to learn through practice with HTML and CSS.",
       text2: undefined,
       text3: undefined,
     },
   },
   {
     name: "cats",
-    title: "Gatos",
+    title: "Cats",
     images: Cats,
     description:
-      "Um site sobre gatos, feito durante o aprendizado de HTML e CSS.",
+      "A website about cats, made during the learning process of HTML and CSS.",
     techStack: ["HTML", "CSS"],
     demo: "Not available",
     text: {
-      title: "Wiki de Raças de Gatos",
+      title: "Cat Breeds Wiki",
       text1:
-        "Este site apresenta 14 raças de gatos em sueco. Foi desenvolvido como prática para aprender HTML e CSS.",
+        "This website presents 14 cat breeds in Swedish. It was developed as practice to learn HTML and CSS.",
+      text2: undefined,
+      text3: undefined,
+    },
+  },
+  {
+    name: "horizon",
+    title: "Event Horizon",
+    images: Horizon,
+    description: "A website for an event planning startup project",
+    techStack: ["React", "Tailwind CSS, MongoDB, Express.js, Node.js"],
+    demo: "Not available",
+    text: {
+      title: "Event Horizon Website",
+      text1:
+        "Event Horizon's idea is to build a complex event planner. With functionalities from planning to management, it is a platform that allows users to create and manage events. It was built with the MERN Stack.",
       text2: undefined,
       text3: undefined,
     },

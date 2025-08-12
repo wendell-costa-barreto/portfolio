@@ -12,6 +12,7 @@ import {
   EldenRing,
   Cats,
   roboto,
+  Horizon,
 } from "@/lib/utils";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { useState } from "react";
@@ -240,6 +241,18 @@ export default function Home() {
             >
               <Link href={"/projects/cats"}>
                 <CarouselDemo propArray={Cats} title="Cat Races" href="cats" />
+              </Link>
+            </motion.div>
+            <motion.div
+              className="ml-[5%] w-[80%]  lg:mt-0"
+              variants={itemVariants}
+            >
+              <Link href={"/projects/cats"}>
+                <CarouselDemo
+                  propArray={Horizon}
+                  title="Event Horizon"
+                  href="horizon"
+                />
               </Link>
             </motion.div>
           </div>

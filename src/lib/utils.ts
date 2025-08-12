@@ -130,6 +130,24 @@ export const Cats: ImageProps[] = [
   }
 ]
 
+export const Horizon: ImageProps[] = [
+  {
+    alt: "Home page of Horizon",
+    src: "/portfolio-photos/horizon/home.png",
+    id: "1",
+  },
+  {
+    alt: "Home page of Horizon",
+    src: "/portfolio-photos/horizon/home2.png",
+    id: "2",
+  },
+  {
+    alt: "Home page of Horizon",
+    src: "/portfolio-photos/horizon/home3.png",
+    id: "3",
+  },
+]
+
 import { Roboto_Condensed } from "next/font/google";
 
 export const roboto = Roboto_Condensed({
