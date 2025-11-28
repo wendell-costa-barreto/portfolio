@@ -8,8 +8,9 @@ import {
   EldenRing,
   Cats,
   Horizon,
+  Scheduler,
 } from "@/lib/utils";
-import { ImageProps } from "@/components/ui/VerticalSlider";
+import type { ImageProps } from "@/types/image";
 import Image from "next/image";
 import { roboto } from "@/lib/utils";
 import Link from "next/link";
@@ -129,6 +130,24 @@ const projects: Project[] = [
         "Event Horizon's idea is to build a complex event planner. With functionalities from planning to management, it is a platform that allows users to create and manage events. It was built with the MERN Stack.",
       text2: undefined,
       text3: undefined,
+    },
+  },
+  {
+    name: "scheduler",
+    title: "Communitary Scheduling Platform",
+    images: Scheduler,
+    description:
+      "A platform that a local community can utilize to schedule appointments and invite others with firebase and whatsapp automation (currently with around 80 users and 100+ appointments)",
+    techStack: ["React", "Tailwind CSS", "Firebase"],
+    demo: "Not available",
+    text: {
+      title: "Communitary Scheduling Platform",
+      text1:
+        "This platform was my solution to a local community that had activities that they were struggling to organize who would be working on each time slots and on each days and often many conflicts would show up due to each person's agenda and availability and the actual agenda for those activities.",
+      text2:
+        "Firstly, since the user-base is a tight-knit community, new users need to contact the admin so then they can create this person's profile and then they can log in (since many of the users are elderly). The admin will ensure that the person has the right role assigned to each person and depending on the role, they can schedule more or less times in a month. There are usually 4 times slots daily with some other exceptions for the community's activities and users can only schedule once a day, twice a week, twice with the same person and the overall monthly limit is determined by their role, assigned by the admin. When scheduling, the user can either join an empty time slot and then wait for someone to join them (since the activities always demand 2 people), or joining someone on a half-full slot or inviting someone that is also registered in the system. Regardless of how someone schedules, they will receive a confirmation message. They can also cancel with some antecedence and that reminder is also sent to the other partner and to themselves to confirm the cancellation. Regular users can also report issues with the platform or with the activities with the report button.",
+      text3:
+        "The admin has a special pre-set credential to login and then be able to manage everything in the app, from assigning people to certain slots if necessary, removing people from slots, being able to see logs from any interaction per user in the platform, cancellations and their reasons, the users' data, overall settings that impact limits like daily scheduling or weekly scheduling and more.",
     },
   },
 ];

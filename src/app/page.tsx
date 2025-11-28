@@ -13,6 +13,7 @@ import {
   Cats,
   roboto,
   Horizon,
+  Scheduler,
 } from "@/lib/utils";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { useState } from "react";
@@ -252,6 +253,20 @@ export default function Home() {
                   propArray={Horizon}
                   title="Event Horizon"
                   href="horizon"
+                />
+              </Link>
+            </motion.div>
+          </div>
+          <div className="w-full flex justify-start items-center mt-[2%] flex-col lg:flex-row">
+            <motion.div
+              className="ml-[5%] w-[80%]  lg:mt-0"
+              variants={itemVariants}
+            >
+              <Link href={"/projects/scheduler"}>
+                <CarouselDemo
+                  propArray={Scheduler}
+                  title="Communitary Scheduling Platform"
+                  href="scheduler"
                 />
               </Link>
             </motion.div>

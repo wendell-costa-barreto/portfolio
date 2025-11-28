@@ -1,5 +1,5 @@
 import { clsx, type ClassValue } from "clsx"
-import { ImageProps } from "@/components/ui/VerticalSlider"
+import { ImageProps } from "@/types/image"
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
@@ -145,6 +145,34 @@ export const Horizon: ImageProps[] = [
     alt: "Home page of Horizon",
     src: "/portfolio-photos/horizon/home3.png",
     id: "3",
+  },
+]
+
+export const Scheduler: ImageProps[] = [
+  {
+    alt: "Login page of Scheduler",
+    src: "/portfolio-photos/scheduler/home.png.jpg",
+    id: "1",
+  },
+  {
+    alt: "User area to schedule",
+    src: "/portfolio-photos/scheduler/home2.png.jpg",
+    id: "2",
+  },
+  {
+    alt: "Modal to schedule and to invite others",
+    src: "/portfolio-photos/scheduler/home3.png.jpg",
+    id: "3",
+  },
+  {
+    alt: "Admin panel",
+    src: "/portfolio-photos/scheduler/home4.png.jpg",
+    id: "4",
+  },
+  {
+    alt: "General settings",
+    src: "/portfolio-photos/scheduler/home5.png.jpg",
+    id: "5",
   },
 ]
 

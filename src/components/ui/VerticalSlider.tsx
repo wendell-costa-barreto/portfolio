@@ -55,6 +55,8 @@ export default function CarouselDemo({
     },
   };
 
+  console.log("VerticalSlider LOADED");
+
   return (
     <motion.div
       initial="initial"
