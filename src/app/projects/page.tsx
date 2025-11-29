@@ -1,3 +1,5 @@
+"use client";
+
 import CarouselDemo from "@/components/ui/VerticalSlider";
 import {
   VisitezLeQuebec,
